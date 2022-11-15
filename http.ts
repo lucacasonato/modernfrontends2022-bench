@@ -50,6 +50,16 @@ const httpTests = [
     fixture: $`bun http-preactssr/bun.jsx`,
     port: 9002,
   },
+  {
+    name: "fresh-hackernews",
+    fixture: $`deno run -A main.ts`.cwd("./fresh-hackernews"),
+    port: 7003,
+  },
+  {
+    name: "next-hackernews",
+    fixture: $`PORT=8003 npm run start`.cwd("./next-hackernews"),
+    port: 8003,
+  },
 ];
 
 const file = await Deno.create("results.md");

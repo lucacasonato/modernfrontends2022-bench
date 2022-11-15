@@ -14,7 +14,7 @@ for (const browser of Object.keys(data.browsers)) {
   browsers[browser] = 0;
 }
 
-walk(data.api);
+walk(data[Deno.args[0] as string]);
 
 function walk(data: Identifier) {
   for (const key of Object.keys(data)) {

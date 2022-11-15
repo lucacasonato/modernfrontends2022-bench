@@ -1,0 +1,6 @@
+[submodule "next-hackernews"]
+	path = next-hackernews
+	url = git@github.com:ryansolid/next-hackernews.git
+[submodule "fresh-hackernews"]
+	path = fresh-hackernews
+	url = git@github.com:ryansolid/fresh-hackernews.git

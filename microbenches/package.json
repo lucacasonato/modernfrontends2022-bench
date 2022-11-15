@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "mitata": "^0.1.6"
+  }
+}

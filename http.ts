@@ -11,6 +11,11 @@ const httpTests = [
     port: 7000,
   },
   {
+    name: "http-raw spindle",
+    fixture: $`spin http-raw/spindle.js`,
+    port: 6000,
+  },
+  {
     name: "http-raw node",
     fixture: $`node http-raw/node.js`,
     port: 8000,

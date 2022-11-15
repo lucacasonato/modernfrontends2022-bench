@@ -43,7 +43,7 @@ RUN chown -R root:root /root/.bun/
 
 ENV PATH="/root/.node/bin:/root/.bun/bin:/root/.spindle:/root/.deno/bin:/root/.wrk/bin:$PATH" 
 
-RUN make upgrade
-RUN make deps
+RUN deno upgrade
+RUN bun upgrade
 
 CMD ["/bin/bash"]

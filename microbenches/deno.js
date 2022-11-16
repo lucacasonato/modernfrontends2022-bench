@@ -1,16 +1,17 @@
 import { bench, run } from "npm:mitata";
 
-try {
-  Deno.removeSync("./fixtures/_tmp", { recursive: true });
-} catch {
-  // ignore if not exists
-}
-Deno.mkdirSync("./fixtures/_tmp");
+const fileStr = Deno.readTextFileSync("./fixtures/small.txt");
+const fileBytes = Deno.readFileSync("./fixtures/small.txt");
 
-let i = 0;
-bench("copy file", async () => {
-  await Deno.copyFile("./fixtures/small.txt", `./fixtures/_tmp/small_${i}.txt`);
-  i++;
+const encoder = new TextEncoder();
+const decoder = new TextDecoder();
+
+bench("TextEncoder.encode", () => {
+  encoder.encode(fileStr);
+});
+
+bench("TextDecoder.decode", () => {
+  decoder.decode(fileBytes);
 });
 
 await run();

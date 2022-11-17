@@ -4,3 +4,9 @@
 [submodule "fresh-hackernews"]
 	path = fresh-hackernews
 	url = git@github.com:ryansolid/fresh-hackernews.git
+[submodule "ffi/sqlite"]
+	path = ffi/sqlite
+	url = git@github.com:sqlite/sqlite.git
+[submodule "ffi/sqlite3"]
+	path = ffi/sqlite3
+	url = git@github.com:denodrivers/sqlite3.git

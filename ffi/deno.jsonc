@@ -1,0 +1,10 @@
+{
+    "tasks": {
+        "bench-c": "./bench 50 1000000",
+        "bench-deno": "DENO_SQLITE_PATH=build/libsqlite3.dylib deno run -A --unstable bench_deno.js 50 1000000",
+        "bench-deno-ffi": "deno run -A --unstable bench_deno_ffi.js 50 1000000",
+        "bench-node": "node bench_node.js 50 1000000",
+        "bench-bun": "bun run bench_bun.js 50 1000000",
+        "bench-bun-ffi": "bun run bench_bun_ffi.js 50 1000000"
+    }
+}

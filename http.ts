@@ -69,7 +69,7 @@ const writer = tes.writable.getWriter();
 
 const results: Map<string, string[]> = new Map();
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 1; i++) {
   for (const test of httpTests) {
     const cmd = test.fixture.timeout(15000).spawn()
       .catch(() => {});
